@@ -56,7 +56,7 @@ function sizeStyles(size) {
   }
 }
 
-const Button = styled.button`
+const StyledButton = styled.button`
   border: none;
   border-radius: 0.25em;
   font-family: ${typography.primary};
@@ -79,6 +79,8 @@ const Button = styled.button`
   ${(props) => typeStyles(props.type)}
   ${(props) => sizeStyles(props.size)}
 `;
+
+const Button = (props) => <StyledButton {...props} />;
 
 Button.propTypes = {
   type: PropTypes.oneOf(["primary", "secondary"]),
