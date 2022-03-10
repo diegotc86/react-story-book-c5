@@ -1,5 +1,13 @@
+import Button from "./components/Button";
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <Button type="secondary" onClick={() => console.log("clicked")}>
+        Click me!
+      </Button>
+    </div>
+  );
 }
 
 export default App;
